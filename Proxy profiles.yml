@@ -90,7 +90,7 @@ dns:
 proxy-providers:
   FlowerCloud:
     type: http
-    path: ./FlowerCloud.yml
+    path: ./profiles/FlowerCloud.yml
     url: https://api.huacloud.xyz/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.flowercloud.xyz%2Fosubscribe.php%3Fsid%3D25090%26token%3Dk3bLJ2IDh4cq%26sip002%3D1
     interval: 36000
     health-check:
@@ -110,99 +110,106 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: ./providers/rule/reject.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./ruleset/reject.yaml
     interval: 86400
 
   icloud:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
-    path: ./providers/rule/icloud.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    path: ./ruleset/icloud.yaml
     interval: 86400
 
   apple:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
-    path: ./providers/rule/apple.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    path: ./ruleset/apple.yaml
     interval: 86400
 
   google:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./providers/rule/google.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+    path: ./ruleset/google.yaml
     interval: 86400
 
   proxy:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./providers/rule/proxy.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
     interval: 86400
 
   direct:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
-    path: ./providers/rule/direct.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
     interval: 86400
 
   private:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
-    path: ./providers/rule/private.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./ruleset/private.yaml
     interval: 86400
 
   gfw:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./providers/rule/gfw.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    path: ./ruleset/gfw.yaml
     interval: 86400
 
   greatfire:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
-    path: ./providers/rule/greatfire.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+    path: ./ruleset/greatfire.yaml
     interval: 86400
 
   tld-not-cn:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./providers/rule/tld-not-cn.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
     interval: 86400
 
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./providers/rule/telegramcidr.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
   cncidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./providers/rule/cncidr.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
     interval: 86400
 
   lancidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./providers/rule/lancidr.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
     interval: 86400
 
   applications:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-    path: ./providers/rule/applications.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+  game-direct:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/776147865/Clash-rules/main/GameDirect.list?token=GHSAT0AAAAAAB4Q6M52Z6PHJSYAZMO6E7XSY6VGTJA"
+    path: ./ruleset/game-direct.yaml
     interval: 86400
 
 
@@ -210,34 +217,7 @@ rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,steampipe.steamcontent.tnkjmec.com,DIRECT
-  - DOMAIN,dl.steam.clngaa.com,DIRECT
-  - DOMAIN,st.dl.eccdnx.com,DIRECT
-  - DOMAIN,st.dl.bscstorage.net,DIRECT
-  - DOMAIN,st.dl.pinyuncloud.com,DIRECT
-  - DOMAIN,cdn.mileweb.cs.steampowered.com.8686c.com,DIRECT
-  - DOMAIN,cdn-ws.content.steamchina.com,DIRECT
-  - DOMAIN,cdn-ali.content.steamchina.com,DIRECT
-  - DOMAIN,xz.pphimalayanrt.com,DIRECT
-  - DOMAIN,cdn-qc.content.steamchina.com,DIRECT
-  - DOMAIN,steam-chat.com,DIRECT
-  - DOMAIN,store.st.dl.pinyuncloud.com,DIRECT
-  - DOMAIN,media.st.dl.eccdnx.com,DIRECT
-  - DOMAIN,media.st.dl.pinyuncloud.com,DIRECT
-  - DOMAIN,cdn.steamstatic.com.8686c.com,DIRECT
-  - DOMAIN,broadcast.st.dl.pinyuncloud.com,DIRECT
-  - DOMAIN,broadcast.st.dl.eccdnx.com,DIRECT
-  - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
-  - DOMAIN,steamcloud-ugc-hkg.oss-accelerate.aliyuncs.com,DIRECT
-  - DOMAIN,ipv6check-http.steamcontent.com,DIRECT
-  - DOMAIN,ipv6check-udp.steamcontent.com,DIRECT
-  - DOMAIN,login.steampowered.com,DIRECT
-  - DOMAIN,test.steampowered.com,DIRECT
-  - DOMAIN-SUFFIX,steamgames.com,DIRECT
-  - DOMAIN-SUFFIX,media.steampowered.com,DIRECT
-  - DOMAIN-SUFFIX,steambroadcast.akamaized.net,DIRECT
-  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
-  - DOMAIN-SUFFIX,steamserver.net,DIRECT
+  - RULE-SET,game-direct,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
