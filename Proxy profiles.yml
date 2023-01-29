@@ -208,28 +208,28 @@ rule-providers:
   Game-direct:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Game-direct.yaml?token=GHSAT0AAAAAAB4Q6M53P4SG62JNZPACYOT4Y6V7ZKA"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Game-direct.yaml"
     path: ./ruleset/Game-direct.yaml
     interval: 86400
 
   Download-direct:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Download-direct.yaml?token=GHSAT0AAAAAAB4Q6M52ZQO4F4CPVWISUQHAY6V7Z7Q"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Download-direct.yaml"
     path: ./ruleset/Download-direct.yaml
     interval: 86400
 
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/LocalAreaNetwork.yaml?token=GHSAT0AAAAAAB4Q6M53364QIPA2ZMGSJRLWY6V72YQ"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/LocalAreaNetwork.yaml"
     path: ./ruleset/LocalAreaNetwork.yaml
     interval: 86400
 
   Unban:
     type: http
     behavior: classical
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Unban.yaml?token=GHSAT0AAAAAAB4Q6M53NDCDTK2EOF24CYXMY6V74GA"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/776147865/Clash-rules/main/Unban.yaml"
     path: ./ruleset/Unban.yaml
     interval: 86400
 
